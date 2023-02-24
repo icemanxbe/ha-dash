@@ -1,0 +1,48 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+stream:
+  ll_hls: true
+  part_duration: 0.75
+  segment_duration: 6
+python_script:
+# Text to speech
+tts:
+  - platform: google_translate
+    language: nl
+
+template:
+
+sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+
+  - platform: systemmonitor
+    resources:
+      - type: processor_use
+      - type: processor_temperature
+      - type: memory_use_percent
+      - type: disk_use_percent
+        arg: /
+      - type: load_1m
+      - type: load_5m
+      - type: load_15m
+      - type: swap_use_percent
+      - type: last_boot
+  - platform: template
+    sensors:
+      sun_elevation:
+        friendly_name: Sun Elevation
+        icon_template: mdi:weather-sunny
+        unit_of_measurement: "°"
+        value_template: >
+          {{ state_attr('sun.sun','elevation') }}
+
+lovelace:
