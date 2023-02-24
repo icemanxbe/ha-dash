@@ -4,10 +4,7 @@ views:
     title: Home
     path: new-main-dash
     icon: mdi:home
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     layout: {}
     badges: []
     cards:
@@ -2073,10 +2070,7 @@ views:
     title: cameras
     path: cameras
     icon: mdi:cctv
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     subview: true
     back_path: /dashboard-mobile/new-main-dash
     type: panel
@@ -2299,10 +2293,7 @@ views:
     title: Shopping Lijst
     path: shopping-list
     icon: mdi:basket
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     subview: true
     back_path: /dashboard-mobile/new-main-dash
     badges: []
@@ -2315,10 +2306,7 @@ views:
     icon: mdi:cloud
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - type: vertical-stack
@@ -3022,10 +3010,7 @@ views:
     title: Energy
     path: energy
     icon: mdi:lightning-bolt
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     subview: true
     back_path: /dashboard-mobile/new-main-dash
     badges: []
@@ -3191,10 +3176,7 @@ views:
     icon: mdi:shield-lock
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - button_scale_actions: 1.5
@@ -3217,10 +3199,7 @@ views:
     icon: mdi:shower
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - cards:
@@ -3726,10 +3705,7 @@ views:
     icon: mdi:sofa
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - cards:
@@ -4182,10 +4158,7 @@ views:
     icon: mdi:nas
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - cards:
@@ -4942,10 +4915,7 @@ views:
     icon: mdi:raspberry-pi
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - cards:
@@ -5144,10 +5114,7 @@ views:
     icon: mdi:stove
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - square: false
@@ -5419,10 +5386,7 @@ views:
     path: phones
     icon: mdi:cellphone
     subview: true
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - type: vertical-stack
@@ -5948,10 +5912,7 @@ views:
     icon: mdi:raspberry-pi
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - cards:
@@ -6092,10 +6053,7 @@ views:
     icon: mdi:lan
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - square: false
@@ -6696,10 +6654,7 @@ views:
     icon: mdi:list-box
     subview: true
     back_path: /dashboard-mobile/new-main-dash
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - entities:
@@ -6765,10 +6720,7 @@ views:
     icon: mdi:calendar
     subview: true
     type: panel
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - type: vertical-stack
@@ -6858,10 +6810,7 @@ views:
     path: slaapkamers
     icon: mdi:bed
     subview: true
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - type: custom:mushroom-entity-card
@@ -7084,10 +7033,7 @@ views:
     path: christmas-lights
     icon: mdi:string-lights
     subview: true
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - square: false
@@ -7222,10 +7168,7 @@ views:
     path: <PERSON>-slaapkamer
     icon: mdi:bed-outline
     subview: true
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - type: custom:apexcharts-card
@@ -7388,10 +7331,7 @@ views:
     path: weerbericht-disney
     icon: mdi:cloud-circle
     subview: true
-    visible:
-      - user: b94858f3ec8446d8a5f87be883802828
-      - user: 3e03ca50a2b34a77ba3c78c8dac4d941
-      - user: e53976c23bb44ebf9495466dd7725987
+
     badges: []
     cards:
       - type: vertical-stack
