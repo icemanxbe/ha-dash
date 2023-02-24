@@ -54,8 +54,8 @@ views:
                     bottom: 0
                     font-weight: 600
                     white-space: nowrap
-              - name: '{{ state_attr(''weather.kontich'',''temperature'') }}°C'
-                entity: weather.kontich
+              - name: '{{ state_attr(''weather.<LOCATION>'',''temperature'') }}°C'
+                entity: weather.<LOCATION>
                 layout: icon|name
                 state_icons:
                   sunny: mdi:weather-sunny
@@ -693,96 +693,96 @@ views:
                         }
                   - type: custom:mushroom-template-card
                     primary: |-
-                      {% if is_state('weather.kontich','unavailable') %}
+                      {% if is_state('weather.<LOCATION>','unavailable') %}
                       METEO ERROR
                       {% elif is_state('binary_sensor.meteoalarm','on') %}
                       METEO ALARM
                       {% else %}
-                      Meteo Kontich
+                      Meteo <LOCATION>
                       {% endif %}
                     secondary: >-
                       {% if is_state('binary_sensor.meteoalarm','on') %}{{
                       state_attr('binary_sensor.meteoalarm','event') }}{% elif
-                      is_state('weather.kontich','unavailable') %}Weerbericht
+                      is_state('weather.<LOCATION>','unavailable') %}Weerbericht
                       niet beschikbaar!{% elif
-                      is_state('weather.kontich','sunny') %}Zonnig{% elif
-                      is_state('weather.kontich','rainy') %}Regenachtig{% elif
-                      is_state('weather.kontich','clear-night') %}Vrije hemel{%
-                      elif is_state('weather.kontich','cloudy') %}Bewolkt{% elif
-                      is_state('weather.kontich','fog') %}Mistig{% elif
-                      is_state('weather.kontich','hail') %}Hagel{% elif
-                      is_state('weather.kontich','lightning') %}Onweer{% elif
-                      is_state('weather.kontich','lightning-rainy') %}Onweer{%
-                      elif is_state('weather.kontich','partlycloudy')
+                      is_state('weather.<LOCATION>','sunny') %}Zonnig{% elif
+                      is_state('weather.<LOCATION>','rainy') %}Regenachtig{% elif
+                      is_state('weather.<LOCATION>','clear-night') %}Vrije hemel{%
+                      elif is_state('weather.<LOCATION>','cloudy') %}Bewolkt{% elif
+                      is_state('weather.<LOCATION>','fog') %}Mistig{% elif
+                      is_state('weather.<LOCATION>','hail') %}Hagel{% elif
+                      is_state('weather.<LOCATION>','lightning') %}Onweer{% elif
+                      is_state('weather.<LOCATION>','lightning-rainy') %}Onweer{%
+                      elif is_state('weather.<LOCATION>','partlycloudy')
                       %}Gedeeltelijk bewolkt{% elif
-                      is_state('weather.kontich','pouring') %}Regen{% elif
-                      is_state('weather.kontich','snowy') %}Sneeuw{% elif
-                      is_state('weather.kontich','snowy-rainy') %}Smeltende
-                      sneeuw{% elif is_state('weather.kontich','windy')
+                      is_state('weather.<LOCATION>','pouring') %}Regen{% elif
+                      is_state('weather.<LOCATION>','snowy') %}Sneeuw{% elif
+                      is_state('weather.<LOCATION>','snowy-rainy') %}Smeltende
+                      sneeuw{% elif is_state('weather.<LOCATION>','windy')
                       %}Winderig{% elif
-                      is_state('weather.kontich','windy-variant') %}Winderig{%
-                      elif is_state('weather.kontich','exceptional')
+                      is_state('weather.<LOCATION>','windy-variant') %}Winderig{%
+                      elif is_state('weather.<LOCATION>','exceptional')
                       %}Exceptioneel
 
                       {% else %}
 
                       {% endif %}
 
-                      {% if is_state('weather.kontich','unavailable') %}{% else
+                      {% if is_state('weather.<LOCATION>','unavailable') %}{% else
                       %}Temperatuur:
-                      {{state_attr('weather.kontich','temperature')}}°C
+                      {{state_attr('weather.<LOCATION>','temperature')}}°C
 
                       Gevoelstemp:
-                      {{states('sensor.kontich_realfeel_temperature')}}°C {%
+                      {{states('sensor.<LOCATION>_realfeel_temperature')}}°C {%
                       endif %}
                     icon: |-
-                      {% if is_state('weather.kontich','unavailable') %}
+                      {% if is_state('weather.<LOCATION>','unavailable') %}
                       mdi:alert-remove
-                      {% elif is_state('weather.kontich','sunny') %}
+                      {% elif is_state('weather.<LOCATION>','sunny') %}
                       mdi:white-balance-sunny
-                      {% elif is_state('weather.kontich','rainy') %}
+                      {% elif is_state('weather.<LOCATION>','rainy') %}
                       mdi:weather-rainy
-                      {% elif is_state('weather.kontich','clear-night') %}
+                      {% elif is_state('weather.<LOCATION>','clear-night') %}
                       mdi:weather-night
-                      {% elif is_state('weather.kontich','cloudy') %}
+                      {% elif is_state('weather.<LOCATION>','cloudy') %}
                       mdi:weather-cloudy
-                      {% elif is_state('weather.kontich','fog') %}
+                      {% elif is_state('weather.<LOCATION>','fog') %}
                       mdi:weather-fog
-                      {% elif is_state('weather.kontich','hail') %}
+                      {% elif is_state('weather.<LOCATION>','hail') %}
                       mdi:weather-hail
-                      {% elif is_state('weather.kontich','lightning') %}
+                      {% elif is_state('weather.<LOCATION>','lightning') %}
                       mdi:weather-lightning
-                      {% elif is_state('weather.kontich','lightning-rainy') %}
+                      {% elif is_state('weather.<LOCATION>','lightning-rainy') %}
                       mdi:weather-lightning-rainy
-                      {% elif is_state('weather.kontich','partlycloudy') %}
+                      {% elif is_state('weather.<LOCATION>','partlycloudy') %}
                       mdi:weather-partly-cloudy
-                      {% elif is_state('weather.kontich','pouring') %}
+                      {% elif is_state('weather.<LOCATION>','pouring') %}
                       mdi:weather-pouring
-                      {% elif is_state('weather.kontich','snowy') %}
+                      {% elif is_state('weather.<LOCATION>','snowy') %}
                       mdi:weather-snowy
-                      {% elif is_state('weather.kontich','snowy-rainy') %}
+                      {% elif is_state('weather.<LOCATION>','snowy-rainy') %}
                       mdi:weather-snowy-rainy
-                      {% elif is_state('weather.kontich','windy') %}
+                      {% elif is_state('weather.<LOCATION>','windy') %}
                       mdi:weather-windy
-                      {% elif is_state('weather.kontich','windy-variant') %}
+                      {% elif is_state('weather.<LOCATION>','windy-variant') %}
                       mdi:weather-windy-variant
-                      {% elif is_state('weather.kontich','exceptional') %}
+                      {% elif is_state('weather.<LOCATION>','exceptional') %}
                       mdi:weather-cloudy-alert
                       {% else %}
                       mdi:weather-cloudy-alert
                       {% endif %}
                     icon_color: >-
-                      {% if is_state('weather.kontich','unavailable') %}
+                      {% if is_state('weather.<LOCATION>','unavailable') %}
 
                       red
 
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float > 30 %}
                           orange
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float > 25 %}
                           #ffcc00
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float > 15 %}  
                           #99cc33
                       {% else %}
@@ -793,12 +793,12 @@ views:
                     badge_icon: >-
                       {% if is_state('binary_sensor.meteoalarm','on') %}
                             mdi:alert
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float < 3 %}
 
                       mdi:snowflake
 
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float > 30 %}
 
                       mdi:thermometer-alert
@@ -807,12 +807,12 @@ views:
                     badge_color: >-
                       {% if is_state('binary_sensor.meteoalarm','on') %}
                             red
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float < 3 %}
 
                       grey
 
-                      {% elif states('sensor.kontich_realfeel_temperature') |
+                      {% elif states('sensor.<LOCATION>_realfeel_temperature') |
                       float > 30 %}
 
                       red
@@ -1415,56 +1415,56 @@ views:
                   - type: custom:mushroom-template-card
                     primary: Meteo Disneyland
                     secondary: >-
-                      {% if is_state('weather.serris','sunny') %}Zonnig{% elif
-                      is_state('weather.serris','rainy') %}Regenachtig{% elif
-                      is_state('weather.serris','clear-night') %}Vrije hemel{%
-                      elif is_state('weather.serris','cloudy') %}Bewolkt{% elif
-                      is_state('weather.serris','fog') %}Mistig{% elif
-                      is_state('weather.serris','hail') %}Hagel{% elif
-                      is_state('weather.serris','lightning') %}Onweer{% elif
-                      is_state('weather.serris','lightning-rainy') %}Onweer{%
-                      elif is_state('weather.serris','partlycloudy')
+                      {% if is_state('weather.<LOCATION>','sunny') %}Zonnig{% elif
+                      is_state('weather.<LOCATION>','rainy') %}Regenachtig{% elif
+                      is_state('weather.<LOCATION>','clear-night') %}Vrije hemel{%
+                      elif is_state('weather.<LOCATION>','cloudy') %}Bewolkt{% elif
+                      is_state('weather.<LOCATION>','fog') %}Mistig{% elif
+                      is_state('weather.<LOCATION>','hail') %}Hagel{% elif
+                      is_state('weather.<LOCATION>','lightning') %}Onweer{% elif
+                      is_state('weather.<LOCATION>','lightning-rainy') %}Onweer{%
+                      elif is_state('weather.<LOCATION>','partlycloudy')
                       %}Gedeeltelijk bewolkt{% elif
-                      is_state('weather.serris','pouring') %}Regen{% elif
-                      is_state('weather.serris','snowy') %}Sneeuw{% elif
-                      is_state('weather.serris','snowy-rainy') %}Smeltende
-                      sneeuw{% elif is_state('weather.serris','windy')
+                      is_state('weather.<LOCATION>','pouring') %}Regen{% elif
+                      is_state('weather.<LOCATION>','snowy') %}Sneeuw{% elif
+                      is_state('weather.<LOCATION>','snowy-rainy') %}Smeltende
+                      sneeuw{% elif is_state('weather.<LOCATION>','windy')
                       %}Winderig{% elif
-                      is_state('weather.serris','windy-variant') %}Winderig{%
-                      elif is_state('weather.serris','exceptional')
+                      is_state('weather.<LOCATION>','windy-variant') %}Winderig{%
+                      elif is_state('weather.<LOCATION>','exceptional')
                       %}Exceptioneel
 
                       {% else %}
 
                       {% endif %}
 
-                      Temperatuur: {{ state_attr('weather.serris','temperature')
+                      Temperatuur: {{ state_attr('weather.<LOCATION>','temperature')
                       }}°C 
                     icon: >-
-                      {% if is_state('weather.serris','sunny')
+                      {% if is_state('weather.<LOCATION>','sunny')
                       %}mdi:weather-sunny{% elif
-                      is_state('weather.serris','rainy') %}mdi:weather-rainy{%
-                      elif is_state('weather.serris','clear-night')
+                      is_state('weather.<LOCATION>','rainy') %}mdi:weather-rainy{%
+                      elif is_state('weather.<LOCATION>','clear-night')
                       %}mdi:weather-night{% elif
-                      is_state('weather.serris','cloudy') %}mdi:weather-cloudy{%
-                      elif is_state('weather.serris','fog') %}mdi:weather-fog{%
-                      elif is_state('weather.serris','hail')
+                      is_state('weather.<LOCATION>','cloudy') %}mdi:weather-cloudy{%
+                      elif is_state('weather.<LOCATION>','fog') %}mdi:weather-fog{%
+                      elif is_state('weather.<LOCATION>','hail')
                       %}mdi:weather-hail{% elif
-                      is_state('weather.serris','lightning')
+                      is_state('weather.<LOCATION>','lightning')
                       %}mdi:weather-lightning{% elif
-                      is_state('weather.serris','lightning-rainy')
+                      is_state('weather.<LOCATION>','lightning-rainy')
                       %}mdi:weather-lightning-rainy{% elif
-                      is_state('weather.serris','partlycloudy')
+                      is_state('weather.<LOCATION>','partlycloudy')
                       %}mdi:weather-partly-cloudy{% elif
-                      is_state('weather.serris','pouring')
+                      is_state('weather.<LOCATION>','pouring')
                       %}mdi:weather-pouring{% elif
-                      is_state('weather.serris','snowy') %}mdi:weather-snowy{%
-                      elif is_state('weather.serris','snowy-rainy')
+                      is_state('weather.<LOCATION>','snowy') %}mdi:weather-snowy{%
+                      elif is_state('weather.<LOCATION>','snowy-rainy')
                       %}mdi:weather-snowy-rainy{% elif
-                      is_state('weather.serris','windy') %}mdi:weather-windy{%
-                      elif is_state('weather.serris','windy-variant')
+                      is_state('weather.<LOCATION>','windy') %}mdi:weather-windy{%
+                      elif is_state('weather.<LOCATION>','windy-variant')
                       %}mdi:weather-windy-variant{% elif
-                      is_state('weather.serris','exceptional')
+                      is_state('weather.<LOCATION>','exceptional')
                       %}mdi:weather-cloudy-alert
 
                       {% else %}
@@ -2333,11 +2333,11 @@ views:
               override_headline: false
               hide_when_no_warning: false
           - type: custom:mushroom-title-card
-            title: Weerbericht Kontich
+            title: Weerbericht <LOCATION>
             alignment: center
             subtitle: ''
           - type: custom:clock-weather-card
-            entity: weather.kontich
+            entity: weather.<LOCATION>
             sun_entity: sun.sun
             weather_icon_type: fill
             animated_icon: true
@@ -2403,7 +2403,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_realfeel_temperature
+              - entity: sensor.<LOCATION>_realfeel_temperature
                 type: line
                 name: Gevoelstemperatuur
                 stroke_width: 3
@@ -2489,7 +2489,7 @@ views:
               legend:
                 show: false
             series:
-              - entity: sensor.kontich_wind
+              - entity: sensor.<LOCATION>_wind
                 name: Wind Snelheid
                 stroke_width: 3
                 color: orange
@@ -2632,7 +2632,7 @@ views:
               show_states: true
               colorize_states: true
             series:
-              - entity: sensor.kontich_thunderstorm_probability_day_0d
+              - entity: sensor.<LOCATION>_thunderstorm_probability_day_0d
                 type: line
                 name: Onweerskans Dag
                 yaxis_id: percentage
@@ -2655,7 +2655,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_thunderstorm_probability_night_0d
+              - entity: sensor.<LOCATION>_thunderstorm_probability_night_0d
                 type: line
                 name: Onweerskans Nacht
                 yaxis_id: percentage
@@ -2747,7 +2747,7 @@ views:
               show_states: true
               colorize_states: true
             series:
-              - entity: sensor.kontich_uv_index
+              - entity: sensor.<LOCATION>_uv_index
                 name: UV index
                 yaxis_id: uvindex
                 curve: stepline
@@ -2771,7 +2771,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_hours_of_sun_0d
+              - entity: sensor.<LOCATION>_hours_of_sun_0d
                 name: Hours of sun
                 yaxis_id: hours
                 color: green
@@ -2794,7 +2794,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_ozone_0d
+              - entity: sensor.<LOCATION>_ozone_0d
                 name: Ozone
                 yaxis_id: Ozone
                 color: blue
@@ -2904,7 +2904,7 @@ views:
               show_states: true
               colorize_states: true
             series:
-              - entity: sensor.kontich_tree_pollen_0d
+              - entity: sensor.<LOCATION>_tree_pollen_0d
                 stroke_width: 1
                 yaxis_id: trees
                 color: brown
@@ -2932,7 +2932,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_grass_pollen_0d
+              - entity: sensor.<LOCATION>_grass_pollen_0d
                 stroke_width: 1
                 yaxis_id: grass
                 color: green
@@ -2954,7 +2954,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_mold_pollen_0d
+              - entity: sensor.<LOCATION>_mold_pollen_0d
                 name: Schimmel Pollen
                 color: grey
                 stroke_width: 1
@@ -2983,7 +2983,7 @@ views:
                   header_color_threshold: true
                   extremas: true
                   in_brush: true
-              - entity: sensor.kontich_ragweed_pollen_0d
+              - entity: sensor.<LOCATION>_ragweed_pollen_0d
                 name: Onkruid pollen
                 color: yellow
                 stroke_width: 1
@@ -7341,7 +7341,7 @@ views:
             alignment: center
             subtitle: Voorspelling
           - type: custom:clock-weather-card
-            entity: weather.serris
+            entity: weather.<LOCATION>
             sun_entity: sun.sun
             title: null
             weather_icon_type: fill
@@ -7399,7 +7399,7 @@ views:
           floating: false
           standard_format: false
         series:
-          - entity: weather.serris
+          - entity: weather.<LOCATION>
             attribute: temperature
             type: line
             yaxis_id: temperature
@@ -7427,7 +7427,7 @@ views:
               header_color_threshold: true
               extremas: true
               in_brush: false
-          - entity: sensor.serris_daily_precipitation
+          - entity: sensor.<LOCATION>_daily_precipitation
             type: area
             name: Gevallen regen
             curve: stepline
@@ -7451,7 +7451,7 @@ views:
               header_color_threshold: true
               extremas: true
               in_brush: false
-          - entity: sensor.serris_rain_chance
+          - entity: sensor.<LOCATION>_rain_chance
             type: line
             name: Kans op regen
             curve: smooth
@@ -7550,7 +7550,7 @@ views:
           show_states: true
           colorize_states: true
         series:
-          - entity: sensor.serris_uv
+          - entity: sensor.<LOCATION>_uv
             type: area
             name: UV Index
             curve: stepline
